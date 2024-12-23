@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,timeFromCreateToActivate=127000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name>FlowTemplate_Empty</copied_from_name>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>get_approval_for_business_travel</internal_name>
+        <label_cache>[{"name":"b7047e26-96d5-4f37-8bde-82c454a01541.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"dae3b904-53ca-40ae-83c9-997860675d0b":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.opened_by.manager","label":"Trigger - Record Created➛Travel Request Record➛Opened by➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","usedInstances":{"b7047e26-96d5-4f37-8bde-82c454a01541":["approval_conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Travel Request Record","reference":"x_snc_tas_travel_0_travel_request","reference_display":"Travel Request","type":"reference","base_type":"reference","usedInstances":{"b7047e26-96d5-4f37-8bde-82c454a01541":["record"],"1fb4dca1-8f91-41b5-8859-6f06784fa288":["record"],"3f327168-ee6d-4c92-a2fa-b21dab4a1616":["record"]},"attributes":{}}]</label_cache>
+        <master_snapshot>24d03b2d97ea5210ff1bfe2de053afc0</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Get approval for business travel</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>acd03b2d97ea5210ff1bfe2de053afee</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:36:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9550fbe997ea5210ff1bfe2de053aff7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Get approval for business travel</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="TAS Travel Request" source="x_snc_tas_travel_0">603d2fa597ea5210ff1bfe2de053afbc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_update_name>sys_hub_flow_9550fbe997ea5210ff1bfe2de053aff7</sys_update_name>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:52</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=9550fbe997ea5210ff1bfe2de053aff7"/>
+    <sys_variable_value action="delete_multiple" query="document_key=9550fbe997ea5210ff1bfe2de053aff7"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_tas_travel_0_travel_request">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>acd03b2d97ea5210ff1bfe2de053afee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+        <table>x_snc_tas_travel_0_travel_request</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>9550fbe997ea5210ff1bfe2de053aff7</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_id>e8d03b2d97ea5210ff1bfe2de053afef</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+        <trigger display_value="">acd03b2d97ea5210ff1bfe2de053afee</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=9550fbe997ea5210ff1bfe2de053aff7^sys_idNOT INe8d03b2d97ea5210ff1bfe2de053afef"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=9550fbe997ea5210ff1bfe2de053aff7"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=9550fbe997ea5210ff1bfe2de053aff7^sys_idNOT INdd50fbe997ea5210ff1bfe2de053aff9"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>9550fbe997ea5210ff1bfe2de053aff7</id>
+        <name>Get approval for business travel</name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:36:43</sys_created_on>
+        <sys_id>dd50fbe997ea5210ff1bfe2de053aff9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:36:43</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=dd50fbe997ea5210ff1bfe2de053aff9"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=9550fbe997ea5210ff1bfe2de053aff7^sys_idNOT IN6bc0732d97ea5210ff1bfe2de053af8b,ebc0732d97ea5210ff1bfe2de053af85"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Get approval for business travel">9550fbe997ea5210ff1bfe2de053aff7</model>
+        <model_id>9550fbe997ea5210ff1bfe2de053aff7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_9550fbe997ea5210ff1bfe2de053aff7</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:47</sys_created_on>
+        <sys_id>6bc0732d97ea5210ff1bfe2de053af8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:47</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6bc0732d97ea5210ff1bfe2de053af8b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Get approval for business travel">9550fbe997ea5210ff1bfe2de053aff7</model>
+        <model_id>9550fbe997ea5210ff1bfe2de053aff7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_9550fbe997ea5210ff1bfe2de053aff7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:47</sys_created_on>
+        <sys_id>ebc0732d97ea5210ff1bfe2de053af85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:47</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ebc0732d97ea5210ff1bfe2de053af85"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=9550fbe997ea5210ff1bfe2de053aff7"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9550fbe997ea5210ff1bfe2de053aff7"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=9550fbe997ea5210ff1bfe2de053aff7^sys_idNOT IN2fc03b2d97ea5210ff1bfe2de053af23"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Get approval for business travel">9550fbe997ea5210ff1bfe2de053aff7</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:47</sys_created_on>
+        <sys_id>2fc03b2d97ea5210ff1bfe2de053af23</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:50</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227bOBD9FUFPW8AL6GLHcd7aJMUG6DZY2919CLICJQ1tYmnKlSglbpF/36FulnVxfEuTvBQ1h+IcHp45Q+bup86JC1y/0KfE5aD3dCYkhILw6WoJOCzVsCPIQsUWRPhEBuFKv5BhDD09CH0I9QuzpyeExzBZRTc+foRT0y/yz/U8jL8fnUh4jiSRI0OSAHeM4j8hfI8hkjjXZ9GSk9Xf+SfTNK6Ny7g3Z9wPQegXd/c9fUlCTCUVjJ+1EFNYPOqRkQWGZ5u2ZRmGdd433TPbNS3fJmAYuGCdghp22cLEeuPwKEH4gKko4RG0kBQC8W8FX5Uz5shxxtKCPEbsB65+bqh5FBC7B1ms/OnkhGTD3jxgHtwuJQtENpLhzIIBjxfia4ZfUQmUxFwWVOJIHOF6sFSQFYgcEZ3Mg4dxkfAzE+nu8iAPPMLLX0TKkLmxhEgRThlH6p2MmyiIwxT9+Prydnzl/PNxevnH9dgZX0+m45vL6fWV/pTuy/keqxUzhDkWJ9vOU3n+nxlwdYAiXriIpqdHXsiW8qMnWQI5nKfeWsCXgfBZykpDxF4RijZFnG+pOEzD6NSxV1m80PK/13811ZoN7ifRszNCfCAdEnVpRaLVTbZAky37re5um1jzkV3U2jeMV9JrVlEHy3UR+MCv1svpGJzNUMBMLGOp2HogQqI5BQ7xfafCo5qKmJ7Tb7a3p2fFGsYCP3DK82hKNqWt5O8LQ+u7uMOCK7hJl8Q4/ZIvOY6FFuDB4T+aF4dIjdQKC6M3CzLLGaUT4ODJigjot6j6608WRUzMKqjLpCkHjZxlOhSTVmwpyx0dmfz+wHpt8pvUeKvV7d5Fa5qUukAtY6hK1jRsl5rG0BgQ6tuG4VmVom2C6UQpa6f/IsW7X+lGqe74DiqrU5yDN6rC30kxyabcChKUGnKHuDwNNPNE0CwFreZ09l5WV8oyG77aVOe2rZ24oxM/IfiFv6vj7Wh2lAcP6LIHGJ1LvP9mYRALv+48ak2NCW09Q/st5+/DCU2PBiFsB7A545Xsbs1woVEiVicwOpua7gj6YKC/2Wht7mA0cj1iUTo8G4Jl1oxuDaMV27swuGeElbQps8vsWjWStElrD5s7AmDD8vYGeLzZ5cJstbos9j5M7WEOwkGoocNZ+jSteduMMx+K2MGF3ciSrEv52OKm5yNvYA6H3hCfHVjctA8uMfvWgIyGZ/b5oFbcDSjbYMoWEn7JYyRaRSmQjsL/loXe1kP6JRUagZSqyezfewXeTtNvSJak0v/UsWipfwSh9jUQv9+s52kTwLaWvkhP1YR3QaEOVntZGG4g541bAKb+hOMbqdXtsYOV13wT1fSQbG7r6DcR9M8HI2q3uwkdtbnJGkw3zDd/adixGJLOsmq7Peyq7aS1RDrb/QFqrcmkeg/YclE5FSnmyUmxXo4U++jLUVGLnQ/BQ8C+o26VXiGOaVkqJzgBrfr0VaBhQMMkGqNa/lc/fNe7K03OASnleAvGhJrKfqxBVxtGE0qp4F8LJLtXNxoXDmv5XelVe1Lt1E/7hAV/SAYDu+OWO6o/YdsAPYP3zXeovQsgaaunrW1qv3Xra7Y2qoo6NxWxYws66a7b+9Bxu27tRM/t+vges+0B3oLijXaP+/8Bpan+7L8eAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=9550fbe997ea5210ff1bfe2de053aff7^sys_idNOT IN2bc03b2d97ea5210ff1bfe2de053af29,6fc03b2d97ea5210ff1bfe2de053af2a,ebc03b2d97ea5210ff1bfe2de053af25"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Get approval for business travel">9550fbe997ea5210ff1bfe2de053aff7</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>dae3b904-53ca-40ae-83c9-997860675d0b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:47</sys_created_on>
+        <sys_id>2bc03b2d97ea5210ff1bfe2de053af29</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:47</sys_updated_on>
+        <ui_id>1fb4dca1-8f91-41b5-8859-6f06784fa288</ui_id>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K66fjbHjNLR5G8sCe1gLWSmMrhOydJNoyLKrj7RZyH/flS2nabt1oQTGYHnK/T7n6ki+2cSCx+N4CDzLz/MRK/KiGGTZ4GyYl6OizAe8oAB5nMSKVoCZGlitOdorKp13bDbvNVALnOQpc1qDststxrkwjaTr65CGHrYUkmM8Ht/cJnFDNXa0oOPx5lnIrhsgkpYgsXBSM1dh0+jjBHsciravnvVwn8P3M9DmoTsR3okhjyfPkhgeLCgOOG5OpYEkrqji1NZ6HY+tduhA1vxSyfUuYymU7ZhW9MGIH9h/mPm8OSA1FrawM0nYUL+cWjC4bKyoVeextJT95mrpKnXRUfC7hTl10u7t1hnsB42H7EF0COefl/X9rJ83FaplF9DKmlG5s6i1WpTOgvHHARLapVS0aYRakEbXK9EWI5QqXUg00rms73GmEQuVUuZxp7ggmk7RP2nd11QLT+ITtsHibUue3Dk/t6MRAJOWc0uYtAeFqYZp0dh32HgFAeY2CXItT18TADt/PO+9no+SfSBGMWKpIVbTFUiS9X803Dkw9qV8r9p4NNvF3ybmKw8nuujgHErlSfFvqAU5P/EFNZ8eTc1nf0nNAdE/Juc/iTgbvPqK7Z10q1uzJ2Bj8cH96rKs4MU3pODZmc7+UjsddWqOgpojYSKEjKSBn5xEH9T3eh3ZJWCaaNKXWj9y9zfeFKgQk4WoQ5UcvLO+wVSA5OYXS+yvShhAVmHA7vE/2n3JR1n7+/8NOOI34PYnS6nvr7QIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Get approval for business travel">9550fbe997ea5210ff1bfe2de053aff7</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>8bad3a65-8777-4743-a59e-316260c7eb3a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:47</sys_created_on>
+        <sys_id>6fc03b2d97ea5210ff1bfe2de053af2a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:47</sys_updated_on>
+        <ui_id>3f327168-ee6d-4c92-a2fa-b21dab4a1616</ui_id>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K8bPxthxGtq8jYXAHtZCVgqj64Qs3SQasuzqI00W8t93Zctp2m5d6AJjMD/5fujec66O7u02Fjwex0PgWX6Rj1iRF8Ugywbnw7wcFWU+4AUFyOMkVrQCzNTAas3RXlHpvGO7fa+BWuAkT5nTGpTd7TDOhWkk3dyENPSwpZAc4/H49i6JG6qxogUdj7fPQnbTAJG0BIkHJzVzFRaNPkywxrFo+9OzHu5z+L4H2jxUJ8I7MeTx5FkSw9qC4oDt5lQaSOKKKk5trTfx2GqHDmTNr5Tc7DOWQtmOaUXXRnzH+sPM580BqbEwhb1JwoT64dSCwVVjRa06j6Wl7CdXS1epy46Cny3MqZP2YLbOYD1oPGQPokM4/7SsH2Z9v6lQLbuAVtaMyr1FrdWidBaMvw6Q0A6lok0j1II0ul6J9jBCqdKFRCOdy/oBexqxUCllHneKA6LpFP2T1n1DtfAkPmIZPLxryZN75/t2NAJg0nJuCZP2ojDVMC0a+w4LryDA3CVBruXZawJgF4/3fVDzUbJrYhQjlhpiNV2BJFn/o+HegbEv5XvdxqPZPv42MV97ONFlB+dYKk8O/4JakPMTX1Dz2cnUfP6X1BwQ/WNy/p2Is8GrW+zgplvdmgMBG4sL94vLsoIPvyIFz8509ufa6ahTcxTUHAmDv9+A4ZJOX0r7z4q98R1AhRAsRB2I5OiJ9AWmAiQ3PxlR/xBCA7IKDfar/WSvIR9l7fd/w59ww9/9AKU7FCOSCAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Get approval for business travel">9550fbe997ea5210ff1bfe2de053aff7</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:47</sys_created_on>
+        <sys_id>ebc03b2d97ea5210ff1bfe2de053af25</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:50</sys_updated_on>
+        <ui_id>b7047e26-96d5-4f37-8bde-82c454a01541</ui_id>
+        <values>H4sIAAAAAAAA/+1X32/aMBD+V5CfURagXSlv1RDSJm2VaLeXUlnGuYAn46S205Yh/vedEyek0KYIIXWr+obv53d33znmZkVERAbkrB934fy8G047YdgLw/4pD/s9mPbOPp/1GA9Jmyi2ALTUwBMd4fmeycwJVqsvGpiFiHYCnmkNyq7XqI+ESSVb/vJmKOFzISPUk8HNbZukTGNEC5oMVlsqu0yBSjYFiY7DhGcLDNr6OsQY+6Itvccl3G34LgeeIx+dCidElcMTtgk8WlARYLaYSQNtsmAqYjbRSzKwOkMBFh1dKrmsLOZC2aLQBXs04g+G73WdXQxYGfdNqI7UN6jsTSI4XKZWJKqQWDaVZeMSmS3Uj6IC11qIWSZtrbWZwXiQOsgORIEwvponD+My30iovDiPViacyerErNVimlkwbhogIe/JgqWpUDOa6uRe5M4IZRHMJB6CWCYPmNOImQoYd7gDbBALRigf5uJfTAtXxHcMg87rvHh6l7m8RRkeMM1rLgpGK8O1SO0FxrwHj3Dd9kSd8sbR882ki3Abnj5Sozi1zFCr2T1IGpY/NNxlYOwuZ69zfWtc6Q9j8LVD0srH1967iifOu1V5+uZHqorQnr2dZvZ6yT707YdvQ1+P6D/j72vUDTtNQ4/6myFjPkTMJI0FyPpdWyp2qVrTHEbSkUv1hKR74C2dL3z21sgDfqkQT9v8uEXb7hFpG74Rcd/vvcsbyQC9zcx/J5lWDdylc2Hykb7I4ZrFsbi8B/zS+VuBf5vK22U1MLn3weR/mMknp41UgGduL56oSDh8psbn4s4Dc6GWP2+eeQQHCWJDwXQZ4PDZDPR6fbtL+kPDHLYZ1UU9ziSYcjv2aEn1nvZ+jS3yu1EptXfy+3FyrOf1263H+3yh8EYexOebuUcZtgOJWv8fOCEFyAkZTIhKFExIe0KcFXWEyMVogeAqRS5brdbrQpJp5gN0aseNd8SWJrc0fA4RkiqXPpEUTPfyY/4NvfIJWkPE/ela1L4tr3et+i+bFf7PNtJvTVVJ0TlR/7KcHu3LcvKxOLXFQZiCVk9o/JDgFXTwNt3+Bc1QVTdVEQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=9550fbe997ea5210ff1bfe2de053aff7"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=9550fbe997ea5210ff1bfe2de053aff7^sys_idNOT IN6fc03b2d97ea5210ff1bfe2de053af27,e7c03b2d97ea5210ff1bfe2de053af2a"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">efc03b2d97ea5210ff1bfe2de053af26</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Get approval for business travel">9550fbe997ea5210ff1bfe2de053aff7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:47</sys_created_on>
+        <sys_id>6fc03b2d97ea5210ff1bfe2de053af27</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:50</sys_updated_on>
+        <ui_id>dae3b904-53ca-40ae-83c9-997860675d0b</ui_id>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8lUJnW6Beft2CFgEKtA3QBLm0gbAiVzZRSlRJyo5r+N+71MMxEgctihx7E2e5uzPLHR0C3bqmdfZOX1kr13Ww+vYwCWTtMfo+BDVUGKwCrmshndR13gGTYAuq9QFoGm22KAgS0jYK9vcvI3wjlTA4VG/AUA2HJlgdnoXcvsFcQYGKCtw6I+s1pUtBp5JBGS15xJN4lsSMxYs0KmZJEcUiAYSE7o2J70ey7z51yORVFb4f4XbspI3wtCI2CfDRYS2I/qoEZXESVFALcNrsT4hBEDe1egI2snZULvCXH638RbXjLPMXSySNHPvg6ZgPI+thvtGS403jCfaIg0INOVyrtqq/9Dr8sLGEVrlx2IS0luph40l7FgOl8najd1/Hhtey7gQOQaU5qNMJHI2haB1a/zCosKJCeUXvSMPJG6O3sksmLlW4VnQIS6V31NRvTgjcEw9pRhBeE/6hg+/BSK/iM5Wh5J5mAVbyvNsyKucMSTh2Y8l/tp5QL3CQkvfToAuWG9m4K+qzxYH1cfJyRc+283Ao5iydYzybLmcim6ZlMp8uCoHTRczTLAUWZWkUEjdSByq3Dhwej99bxhLRo5dW+63KvoUvlpCVWcSyy75IZ5d8ccERr5sh/oMZ/PP9pRcYY//NcG4GafN+qQdtXfN/9sKDX/y+g+33RiCXlojceezj+Ff3gT0tgOTn0E6bH17CE3b8DeS2yKwfBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">efc03b2d97ea5210ff1bfe2de053af29</block>
+        <comment/>
+        <connected_to>dae3b904-53ca-40ae-83c9-997860675d0b</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Get approval for business travel">9550fbe997ea5210ff1bfe2de053aff7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:47</sys_created_on>
+        <sys_id>e7c03b2d97ea5210ff1bfe2de053af2a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:50</sys_updated_on>
+        <ui_id>8bad3a65-8777-4743-a59e-316260c7eb3a</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=9550fbe997ea5210ff1bfe2de053aff7"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=9550fbe997ea5210ff1bfe2de053aff7"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_9550fbe997ea5210ff1bfe2de053aff7^sys_idNOT IN2bc03b2d97ea5210ff1bfe2de053af10,6bc0732d97ea5210ff1bfe2de053af8a"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_9550fbe997ea5210ff1bfe2de053aff7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:47</sys_created_on>
+        <sys_id>2bc03b2d97ea5210ff1bfe2de053af10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="TAS Travel Request" source="x_snc_tas_travel_0">603d2fa597ea5210ff1bfe2de053afbc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:47</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_9550fbe997ea5210ff1bfe2de053aff7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:47</sys_created_on>
+        <sys_id>6bc0732d97ea5210ff1bfe2de053af8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="TAS Travel Request" source="x_snc_tas_travel_0">603d2fa597ea5210ff1bfe2de053afbc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:47</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_9550fbe997ea5210ff1bfe2de053aff7"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_9550fbe997ea5210ff1bfe2de053aff7"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_9550fbe997ea5210ff1bfe2de053aff7"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name/>
+        <description/>
+        <flow_priority/>
+        <internal_name>get_approval_for_business_travel</internal_name>
+        <label_cache>[{"name":"b7047e26-96d5-4f37-8bde-82c454a01541.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"dae3b904-53ca-40ae-83c9-997860675d0b":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.opened_by.manager","label":"Trigger - Record Created➛Travel Request Record➛Opened by➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","usedInstances":{"b7047e26-96d5-4f37-8bde-82c454a01541":["approval_conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Travel Request Record","reference":"x_snc_tas_travel_0_travel_request","reference_display":"Travel Request","type":"reference","base_type":"reference","usedInstances":{"b7047e26-96d5-4f37-8bde-82c454a01541":["record"],"1fb4dca1-8f91-41b5-8859-6f06784fa288":["record"],"3f327168-ee6d-4c92-a2fa-b21dab4a1616":["record"]},"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Get approval for business travel</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Get approval for business travel">9550fbe997ea5210ff1bfe2de053aff7</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>24d03b2d97ea5210ff1bfe2de053afc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=24d03b2d97ea5210ff1bfe2de053afc0"/>
+    <sys_variable_value action="delete_multiple" query="document_key=24d03b2d97ea5210ff1bfe2de053afc0"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=24d03b2d97ea5210ff1bfe2de053afc0"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=24d03b2d97ea5210ff1bfe2de053afc0^sys_idNOT IN68d03b2d97ea5210ff1bfe2de053afc1"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>24d03b2d97ea5210ff1bfe2de053afc0</id>
+        <name>Get approval for business travel</name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_id>68d03b2d97ea5210ff1bfe2de053afc1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=68d03b2d97ea5210ff1bfe2de053afc1"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=24d03b2d97ea5210ff1bfe2de053afc0^sys_idNOT INacd03b2d97ea5210ff1bfe2de053afc2,e4d03b2d97ea5210ff1bfe2de053afcf"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Get approval for business travel">24d03b2d97ea5210ff1bfe2de053afc0</model>
+        <model_id>24d03b2d97ea5210ff1bfe2de053afc0</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_24d03b2d97ea5210ff1bfe2de053afc0</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_id>acd03b2d97ea5210ff1bfe2de053afc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=acd03b2d97ea5210ff1bfe2de053afc2"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Get approval for business travel">24d03b2d97ea5210ff1bfe2de053afc0</model>
+        <model_id>24d03b2d97ea5210ff1bfe2de053afc0</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_24d03b2d97ea5210ff1bfe2de053afc0</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_id>e4d03b2d97ea5210ff1bfe2de053afcf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e4d03b2d97ea5210ff1bfe2de053afcf"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=24d03b2d97ea5210ff1bfe2de053afc0"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=24d03b2d97ea5210ff1bfe2de053afc0"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=24d03b2d97ea5210ff1bfe2de053afc0^sys_idNOT INe0d03b2d97ea5210ff1bfe2de053afdf"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Get approval for business travel">24d03b2d97ea5210ff1bfe2de053afc0</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_id>e0d03b2d97ea5210ff1bfe2de053afdf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227bOBD9FUFPW8AL6GLHcd7aJMUG6DZY2919CLICJQ1tYmnKlSglbpF/36FulnVxfEuTvBQ1h+IcHp45Q+bup86JC1y/0KfE5aD3dCYkhILw6WoJOCzVsCPIQsUWRPhEBuFKv5BhDD09CH0I9QuzpyeExzBZRTc+foRT0y/yz/U8jL8fnUh4jiSRI0OSAHeM4j8hfI8hkjjXZ9GSk9Xf+SfTNK6Ny7g3Z9wPQegXd/c9fUlCTCUVjJ+1EFNYPOqRkQWGZ5u2ZRmGdd433TPbNS3fJmAYuGCdghp22cLEeuPwKEH4gKko4RG0kBQC8W8FX5Uz5shxxtKCPEbsB65+bqh5FBC7B1ms/OnkhGTD3jxgHtwuJQtENpLhzIIBjxfia4ZfUQmUxFwWVOJIHOF6sFSQFYgcEZ3Mg4dxkfAzE+nu8iAPPMLLX0TKkLmxhEgRThlH6p2MmyiIwxT9+Prydnzl/PNxevnH9dgZX0+m45vL6fWV/pTuy/keqxUzhDkWJ9vOU3n+nxlwdYAiXriIpqdHXsiW8qMnWQI5nKfeWsCXgfBZykpDxF4RijZFnG+pOEzD6NSxV1m80PK/13811ZoN7ifRszNCfCAdEnVpRaLVTbZAky37re5um1jzkV3U2jeMV9JrVlEHy3UR+MCv1svpGJzNUMBMLGOp2HogQqI5BQ7xfafCo5qKmJ7Tb7a3p2fFGsYCP3DK82hKNqWt5O8LQ+u7uMOCK7hJl8Q4/ZIvOY6FFuDB4T+aF4dIjdQKC6M3CzLLGaUT4ODJigjot6j6608WRUzMKqjLpCkHjZxlOhSTVmwpyx0dmfz+wHpt8pvUeKvV7d5Fa5qUukAtY6hK1jRsl5rG0BgQ6tuG4VmVom2C6UQpa6f/IsW7X+lGqe74DiqrU5yDN6rC30kxyabcChKUGnKHuDwNNPNE0CwFreZ09l5WV8oyG77aVOe2rZ24oxM/IfiFv6vj7Wh2lAcP6LIHGJ1LvP9mYRALv+48ak2NCW09Q/st5+/DCU2PBiFsB7A545Xsbs1woVEiVicwOpua7gj6YKC/2Wht7mA0cj1iUTo8G4Jl1oxuDaMV27swuGeElbQps8vsWjWStElrD5s7AmDD8vYGeLzZ5cJstbos9j5M7WEOwkGoocNZ+jSteduMMx+K2MGF3ciSrEv52OKm5yNvYA6H3hCfHVjctA8uMfvWgIyGZ/b5oFbcDSjbYMoWEn7JYyRaRSmQjsL/loXe1kP6JRUagZSqyezfewXeTtNvSJak0v/UsWipfwSh9jUQv9+s52kTwLaWvkhP1YR3QaEOVntZGG4g541bAKb+hOMbqdXtsYOV13wT1fSQbG7r6DcR9M8HI2q3uwkdtbnJGkw3zDd/adixGJLOsmq7Peyq7aS1RDrb/QFqrcmkeg/YclE5FSnmyUmxXo4U++jLUVGLnQ/BQ8C+o26VXiGOaVkqJzgBrfr0VaBhQMMkGqNa/lc/fNe7K03OASnleAvGhJrKfqxBVxtGE0qp4F8LJLtXNxoXDmv5XelVe1Lt1E/7hAV/SAYDu+OWO6o/YdsAPYP3zXeovQsgaaunrW1qv3Xra7Y2qoo6NxWxYws66a7b+9Bxu27tRM/t+vges+0B3oLijXaP+/8Bpan+7L8eAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=24d03b2d97ea5210ff1bfe2de053afc0^sys_idNOT IN24d03b2d97ea5210ff1bfe2de053afde,2cd03b2d97ea5210ff1bfe2de053afde,64d03b2d97ea5210ff1bfe2de053afdd"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Get approval for business travel">24d03b2d97ea5210ff1bfe2de053afc0</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>dae3b904-53ca-40ae-83c9-997860675d0b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_id>24d03b2d97ea5210ff1bfe2de053afde</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+        <ui_id>1fb4dca1-8f91-41b5-8859-6f06784fa288</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K8HPUZQ0BUHfpnZIkxhIgCpNjEWufUs9OU7wR2lW9b/vJnHSCBADqS9ofcr9ss85vSe52xLByYSMgcfJWXLC0iRNR3E8Oh0ni5N0kYx4SgESEhJFc8BODazQHOM1la5ObLdTDdQCz5KIOa1B2d0O61yYUtJq7tsww1ZCcqyTyd19SEqq8UQLmky2z0rvhSTpAiS2XneYnmO0VVnHvGAuR1yZ6JIXfnLmK8G3GVZwqIaTxCGBjQXFAYEsqTQQkpwqTm2hKzKx2mECSfMrJau+YyWUbYnmdGPEH7x5HNd9S0BmzIvQh5kXqE0vZ9TSGzyZWad7vQrBwLSacFhSJ+10mGsbrkorCtWOWLqQ3XQhXa4uW0VIf8Dg/3AGQUBZ86yRt7SWN6vi6boDeS5UI4mnKAtGZR9Ra7VYOFvD2RKQ0Gic07IU6iErdbEWzTBCyaMHiUG0lMUT3mnEg4ooq3FHqCqNzjE/a9JzqkVN4jseg8O7kJjKTCU1Zk8FNcweXY2kJeYpZI0KjQRZswn1MNOitF/wqjV44LvQL/3i+K0NY2f7hRqcuV/8TWYUyyw1mdV0DTKLuwcNjw6MfWmC26YeXPf1j1niHYA7S9w2i/A6Ae+KF7mL4Wxw2Ra8J44P5onTz+QJT+PTm+JfVohHb75sB5vUbL8Z2MBYfPn/dHGc8vQXkqr5mjb+UTgdtJ4IvCcCYQIkgTIAPzoKvqrfRRXYFWCbKKOXjjnw6R/z2ztU6fx2LkBy84pMndkgR1oWsla2Z4bzxWDui/2H6GCuS07i5veJvPfffI/u/wJSyagnhgkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Get approval for business travel">24d03b2d97ea5210ff1bfe2de053afc0</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>8bad3a65-8777-4743-a59e-316260c7eb3a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_id>2cd03b2d97ea5210ff1bfe2de053afde</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+        <ui_id>3f327168-ee6d-4c92-a2fa-b21dab4a1616</ui_id>
+        <values>H4sIAAAAAAAA/+VVXWviQBT9K2GeQ0iMlda3RREWui3YIizdbhhnbnSWyUfnw+qK/31vkkkULV3L9kXWp8z9yjnHezJPWyI4GZI+8DC6iQYsjuK4F4a96340H8TzqMdjChARn+Q0A6xUwArF8byi0laB7XakgBrgSRQwqxTkZrfDPBe6lHQzc2UYYUshOebJ8OnZJyVVONGAIsPtUepcSJLOQWLptMV0jNFsyurMC2YzxJWINnjrOscu430dYwabKjhR6BNYG8g5IJCUSg0+yWjOqSnUhgyNshhA0vw+l5uuYily0xDN6FqL3/jmfljVpYDMmBOhOyZOoCacjqmhDziZGas6vQrBQDeacEiplWZ0GGsK7ksjirxpMXQu2+5C2iy/axQh3YCD/8NqBAFlxbNC3tBKH5bF67QFORF5LYmjKAtGZXeixigxt6aCsyUgodY4o2Up8kVSqmIl6maEkgULiYcglcUrvlOLRR5QVuEOUFUaTDA+rsMzqkRF4huOweadT/RGjyTVek8FNUxebIWkIeYoJLUKtQRJvQlVM1OiNF/wVStwwHe+W/r51Xsbxm72C3Uwc7/460TnLDFUJ0bRFcgkbB8UvFjQ5tQEj3Xem3b5j1niDMCtJR7rRXibgHPFSez2sNe7axLOE1ef5onrS/KEo3HxpvibFcLeux/bg02qt18f2EAb/Pj/sGEY8/5PJFXx1c35e2GV13jCc57whMbHX8DwwghODfJvwz7mpjM4t26aCJBcvyFCayXIkIWBpBHlyE4u6c1csrtmPs1T0SCsfxfkrP/mtnn+Ay9JQRJkCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Get approval for business travel">24d03b2d97ea5210ff1bfe2de053afc0</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_id>64d03b2d97ea5210ff1bfe2de053afdd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+        <ui_id>b7047e26-96d5-4f37-8bde-82c454a01541</ui_id>
+        <values>H4sIAAAAAAAA/+1XXU/bMBT9K5WfqyxtYZS+ISqkTRtIwHihyHIdp/XkOsF2gKzqf9+N7XzQQmlZXzp46/3MubfnxPHtHPEIDdBRP+6y4+NuOO6EYS8M+4c07PfYuHf09ahHaIjaSJIZg0zFaKIisB+IyArHfH6qGDEswp2AZkoxaRYLiEdcp4LkNz4NPHTKRQRxNLi9a6OUKOhomEKD+VJoU0iCjJmA1MsS0zJGk6eFHSU0mwEuzEvnD1859JHWtyFEoKiAE7YRezJMRgxwxERo1kYzIiNiEpWjgVEZOGDm6EKKvMqYcmncnDPypPkfeHCvW+TFDAajfgeVif1+nDseEkOuoDM1marWlXDKtFtJxGKSCXPa9LmEi9TwRLoSQ8airE5ENpPnbiGoatD4OzINIFhazFkgd2PFV9Pk8bIEecal3YgfUSSUiMoixig+zkwBZ46YYHbFM5KmXE5wqpIHbosByiyYCDCCWCSP8EzNJzIgtMAdwFZJcAb+oXXfEMWLIX5CGyhetJHO9akgWtejwA7xfVYgcYP5EbDdgltBUUcVT80JPOWBecyLtqf7mK7lFq2p5NrVbH/CWlJsiMZGkQcmcFj+UOw+Y9qsMv/axluXVXw7HWyAtdTBtQe7hN2rwJrYxp6LwJa1zl3Aa6CzXgPeU4vAsecFDfTDPdKAH2vvRfAW/8POOk5F/ZpDgABmIALHnInma78MrPK9EdmO6RugKpl+4p/ROvOwXoPruW/Nl7hv65e4392S+68fAP0w3Cf6f6QjgK4lG+vVnPqdZEquUQCecm2Z8aoSGhnbKWIDkKUivjuUy4JYBv8ePfQ+9fD/6+HgcC3VGp8VFatpIiNeINYNVbg3M9MnMv91+8LdIEgAGzjGeQAcIhOmFou7Vem8t812+tpg6OqOkQmm31qCV1cVVL6oqbDq6Co7epUd7OrWsWci+yjfXHQt1+LjmltRBgsCujcv2SPkYI/QYIRkItkItUeoyMIFuawbMgBcFbC++XyxcJ5MEd+g0zDr6ojk2mZqOmURcNN6n3mwFYP37+KOv8FOSv0NM9YauqWsrsnrrsLp9sJXTrcrn2A7fbnmzVPucGen3MGn/P5VfgCT4+oiAUcYvP12qMm7v3vUdPj4EgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=24d03b2d97ea5210ff1bfe2de053afc0"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=24d03b2d97ea5210ff1bfe2de053afc0^sys_idNOT IN60d03b2d97ea5210ff1bfe2de053afdb,a4d03b2d97ea5210ff1bfe2de053afdc"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">efc03b2d97ea5210ff1bfe2de053af26</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Get approval for business travel">24d03b2d97ea5210ff1bfe2de053afc0</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_id>60d03b2d97ea5210ff1bfe2de053afdb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+        <ui_id>dae3b904-53ca-40ae-83c9-997860675d0b</ui_id>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJnWdDTr1vgIECBtAGaIJc2EFYkZROlRJWk7LiC/71LPWwjcdEGzbE3cZa7nBlyoJaoxtaNNQ/qyhixrsjy65NHROUw/G5JBSUnS0JVxYQVqso6wCNbkI0rQF0rveUMISZMLWH/+LpCN0IyzYfpNWicYbkmy/ZFSTBsLAIowgUNaRxN4ygIonkS5tM4DyMWA4cYB0rIucStq5HWh9sO8X7L1+5rhxurRbUe1rfDlPsRVJo5VmHgEf5secWQ/bIAabhHSqgYWKX3R0RzYHeVPAEbUVkcR9zmZyN+4oFRmrqNBUeJlPfF4zIbHOvh4hosIJWG2kYPW+lGCcpNbw7jBTTSrs6xfsNd7aT2LRZyOXYr2ZTV594RchwwXhAijUESvHZKHfVBR3G/UbsvI8sbUXWuDEWpKMjjCix6lzfW8WkJl7zEQVmJd4+OZrVWW9E1I5fSX0tc+IVUOzzUvTYfqCPuo7Hg3yB+3cGPoIVT8QnHYHNPMwcjaNa9TByHNnFy8IjZm5UEY04i0d3sR+Mo9pIHcVnvj2uhWtT2Ck/e8kHHwXv90M/eeNvmsyCZ8Wg6WUxZOkmKeDaZ54xP5hFN0gSCME1CH9miXpCZsWD54fCtCYKY9eilgLzX2LelawFpkYZBejldyfRSui7k6o2Riv4QKXeff5moIAj+R+qfIyVM1gdh0NYd/o6JenLx6c88ek2FQWoPDvs4/mFcYY+PS9BzaKf0dyfqhB1+ARBZJlarBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">efc03b2d97ea5210ff1bfe2de053af29</block>
+        <comment/>
+        <connected_to>dae3b904-53ca-40ae-83c9-997860675d0b</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Get approval for business travel">24d03b2d97ea5210ff1bfe2de053afc0</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_id>a4d03b2d97ea5210ff1bfe2de053afdc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+        <ui_id>8bad3a65-8777-4743-a59e-316260c7eb3a</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=24d03b2d97ea5210ff1bfe2de053afc0"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=24d03b2d97ea5210ff1bfe2de053afc0"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_24d03b2d97ea5210ff1bfe2de053afc0^sys_idNOT IN6cd03b2d97ea5210ff1bfe2de053afcc,6cd03b2d97ea5210ff1bfe2de053afd3"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_24d03b2d97ea5210ff1bfe2de053afc0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_id>6cd03b2d97ea5210ff1bfe2de053afcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="TAS Travel Request" source="x_snc_tas_travel_0">603d2fa597ea5210ff1bfe2de053afbc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_24d03b2d97ea5210ff1bfe2de053afc0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:51</sys_created_on>
+        <sys_id>6cd03b2d97ea5210ff1bfe2de053afd3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="TAS Travel Request" source="x_snc_tas_travel_0">603d2fa597ea5210ff1bfe2de053afbc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TAS Travel Request">603d2fa597ea5210ff1bfe2de053afbc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_24d03b2d97ea5210ff1bfe2de053afc0"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_24d03b2d97ea5210ff1bfe2de053afc0"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_24d03b2d97ea5210ff1bfe2de053afc0"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>9550fbe997ea5210ff1bfe2de053aff7</sys_id>
+        <latest_snapshot>24d03b2d97ea5210ff1bfe2de053afc0</latest_snapshot>
+        <compiler_build/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=9550fbe997ea5210ff1bfe2de053aff7^sys_idNOT INecd03b2d97ea5210ff1bfe2de053aff0"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>9550fbe997ea5210ff1bfe2de053aff7</plan_id>
+        <snapshot>24d03b2d97ea5210ff1bfe2de053afc0</snapshot>
+        <sys_created_by>citizen_developer</sys_created_by>
+        <sys_created_on>2024-12-18 16:38:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ecd03b2d97ea5210ff1bfe2de053aff0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>citizen_developer</sys_updated_by>
+        <sys_updated_on>2024-12-18 16:38:52</sys_updated_on>
+        <trigger display_value="">acd03b2d97ea5210ff1bfe2de053afee</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=9550fbe997ea5210ff1bfe2de053aff7"/>
+</record_update>

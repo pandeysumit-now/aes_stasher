@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c28d27e597ea5210ff1bfe2de053af6b" extends="task" label="Travel Request" max_length="40" name="x_snc_tas_travel_0_travel_request" type="collection">
+        <element label="Travel start date" max_length="40" name="travel_start_date" type="glide_date"/>
+        <element formula="TIMEDIFF(travel_end_date,travel_start_date)" label="Travel days" max_length="40" name="travel_days" type="string" virtual="true" virtual_type="formula"/>
+        <element label="Travelling to" max_length="32" name="travelling_to" reference="x_snc_tas_travel_0_airports" type="reference"/>
+        <element label="Travel end date" max_length="40" name="travel_end_date" type="glide_date"/>
+        <element label="Travelling from" max_length="32" name="travelling_from" reference="x_snc_tas_travel_0_airports" type="reference"/>
+    </element>
+</database>

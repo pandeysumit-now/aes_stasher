@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="bfbee36997ea5210ff1bfe2de053af2c" label="Airports" max_length="40" name="x_snc_tas_travel_0_airports" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Name" max_length="43" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Code" max_length="40" name="code" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="City" max_length="40" name="city" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="State" max_length="40" name="state" type="string"/>
+        <element attributes="encode_utf8=false" label="Country" max_length="32" name="country" reference="core_country" type="reference"/>
+        <index name="index">
+            <element name="country"/>
+        </index>
+    </element>
+</database>
